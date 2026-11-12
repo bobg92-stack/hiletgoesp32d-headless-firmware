@@ -3,9 +3,6 @@
 #include "tftLogger.h" 
 #include <TFT_eSPI.h>
 
-// This tells the compiler to swap the missing function for the standard one
-#define drawGlyphEt drawGlyph
-
 void _setup_gpio() {}
 void _post_setup_gpio() {}
 void InputHandler() {}
