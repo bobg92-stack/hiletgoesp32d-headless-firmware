@@ -21,7 +21,6 @@ tft_logger::~tft_logger() {}
 void tft_logger::fillScreen(int32_t color) {}
 void tft_logger::drawLine(int32_t x0, int32_t y0, int32_t x1, int32_t y1, int32_t color) {}
 void tft_logger::fillRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t color) {} 
-
 size_t tft_logger::println(const String &s) { return 0; }
 size_t tft_logger::print(const String &s) { return 0; }
 int16_t tft_logger::drawString(const String &string, int32_t x, int32_t y, uint8_t font) { return 0; }
@@ -30,7 +29,7 @@ int16_t tft_logger::drawCentreString(const String &string, int32_t x, int32_t y,
 void tft_logger::getBinLog(uint8_t* outBuffer, size_t& outSize) {}
 void tft_logger::drawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t r, int32_t color) {}
 
-// --- New stubs for the serial command handler ---
+// The three functions the serial commands are looking for:
 void tft_logger::startAsyncSerial() {}
 void tft_logger::stopAsyncSerial() {}
 String tft_logger::getTftInfo() { return ""; } 
