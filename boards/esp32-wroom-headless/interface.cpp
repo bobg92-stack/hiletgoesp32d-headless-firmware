@@ -28,9 +28,9 @@ int16_t tft_logger::drawCentreString(const String &string, int32_t x, int32_t y,
 
 void tft_logger::getBinLog(uint8_t* outBuffer, size_t& outSize) {}
 void tft_logger::drawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t r, int32_t color) {}
-
 void tft_logger::startAsyncSerial() {}
 void tft_logger::stopAsyncSerial() {}
-
-// Changed from String to void to match the header file exactly
 void tft_logger::getTftInfo() {}
+
+// --- New stub for the SD card file copy progress arc ---
+void tft_logger::drawArc(int32_t x, int32_t y, int32_t r, int32_t ir, int32_t startAngle, int32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool smooth) {}
