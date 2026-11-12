@@ -67,6 +67,8 @@ void tft_logger::getBinLog(uint8_t *outBuffer, size_t &outSize) {}
 void tft_logger::startAsyncSerial() {}
 void tft_logger::stopAsyncSerial() {}
 void tft_logger::getTftInfo() {}
-
-// The problematic line is gone!
 void tft_logger::log_drawString(String text, tftFuncs func, long arg1, long arg2) {}
+
+// --- The two new fixes ---
+void tft_logger::setLogging(bool state) {}
+void tft_logger::drawGlyphEt(uint16_t code) {}
