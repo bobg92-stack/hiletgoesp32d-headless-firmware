@@ -28,7 +28,6 @@ int16_t tft_logger::drawString(const String &string, int32_t x, int32_t y, uint8
 int16_t tft_logger::drawCentreString(const String &string, int32_t x, int32_t y, uint8_t font) { return 0; }
 
 void tft_logger::drawRoundRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t r) {}
-void tft_logger::getBinLog(uint8_t* buf, uint32_t& len) {}
 
-// I also removed drawCircle, fillCircle, and setTextColor just in case they 
-// cause the same "no declaration" error. If the linker asks for them later, we will add them back correctly.
+// Changed uint32_t to size_t to match the header exactly
+void tft_logger::getBinLog(uint8_t* outBuffer, size_t& outSize) {}
