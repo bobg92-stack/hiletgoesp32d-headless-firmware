@@ -1,6 +1,7 @@
 #include "core/powerSave.h"
 #include "globals.h"
 #include "tftLogger.h" 
+#include <TFT_eSPI.h>
 
 void _setup_gpio() {}
 void _post_setup_gpio() {}
@@ -68,7 +69,7 @@ void tft_logger::startAsyncSerial() {}
 void tft_logger::stopAsyncSerial() {}
 void tft_logger::getTftInfo() {}
 void tft_logger::log_drawString(String text, tftFuncs func, long arg1, long arg2) {}
-
-// --- The two new fixes ---
 void tft_logger::setLogging(bool state) {}
-void tft_logger::drawGlyphEt(uint16_t code) {}
+
+// --- The correct signature for the parent class ---
+void TFT_eSPI::drawGlyphEt() {}
