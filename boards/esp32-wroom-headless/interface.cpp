@@ -3,6 +3,9 @@
 #include "tftLogger.h" 
 #include <TFT_eSPI.h>
 
+// This tells the compiler to swap the missing function for the standard one
+#define drawGlyphEt drawGlyph
+
 void _setup_gpio() {}
 void _post_setup_gpio() {}
 void InputHandler() {}
@@ -70,6 +73,3 @@ void tft_logger::stopAsyncSerial() {}
 void tft_logger::getTftInfo() {}
 void tft_logger::log_drawString(String text, tftFuncs func, long arg1, long arg2) {}
 void tft_logger::setLogging(bool state) {}
-
-// --- The correct signature for the parent class ---
-void TFT_eSPI::drawGlyphEt() {}
