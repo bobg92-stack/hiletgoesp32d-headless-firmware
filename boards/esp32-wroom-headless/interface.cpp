@@ -1,6 +1,6 @@
 #include "core/powerSave.h"
 #include "globals.h"
-#include "core/tftLogger/tftLogger.h" // Correct path to the header
+#include "tftLogger.h" // Now it will look in src/core/tftLogger/
 
 void _setup_gpio() {}
 void _post_setup_gpio() {}
@@ -11,11 +11,10 @@ void powerOff() {}
 void checkReboot() {}
 bool isCharging() { return false; }
 
-// --- Stubs for RF Spectrum (which we excluded) ---
+// --- Stubs for RF Spectrum ---
 void rf_spectrum() {}
 
 // --- Stubs for Timer and RF Scan ---
-// We provide the global object and the empty functions it needs.
 tft_logger tft_logger;
 
 void tft_logger::fillScreen(uint16_t color) {}
