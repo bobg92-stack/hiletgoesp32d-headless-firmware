@@ -17,9 +17,9 @@ void rf_spectrum() {}
 // --- Stubs matching exact C++ signatures ---
 tft_logger tft_logger;
 
-void tft_logger::fillScreen(uint16_t color) {}
+// Changed uint16_t to int32_t to match the header exactly
+void tft_logger::fillScreen(int32_t color) {}
 
-// Changed color to int32_t to match the header exactly
 void tft_logger::drawLine(int32_t x0, int32_t y0, int32_t x1, int32_t y1, int32_t color) {}
 
 size_t tft_logger::print(const String &s) { return 0; }
