@@ -17,8 +17,8 @@ void rf_spectrum() {}
 // --- Stubs matching exact C++ signatures ---
 tft_logger tft_logger;
 
-// Added constructor and destructor to satisfy the linker
-tft_logger::tft_logger(String filename) {}
+// Corrected constructor to match (int16_t w, int16_t h)
+tft_logger::tft_logger(int16_t w, int16_t h) {}
 tft_logger::~tft_logger() {}
 
 void tft_logger::fillScreen(int32_t color) {}
