@@ -32,5 +32,5 @@ void tft_logger::startAsyncSerial() {}
 void tft_logger::stopAsyncSerial() {}
 void tft_logger::getTftInfo() {}
 
-// --- New stub for the SD card file copy progress arc ---
-void tft_logger::drawArc(int32_t x, int32_t y, int32_t r, int32_t ir, int32_t startAngle, int32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool smooth) {}
+// Fixed: Changed startAngle and endAngle to uint32_t to match the header exactly
+void tft_logger::drawArc(int32_t x, int32_t y, int32_t r, int32_t ir, uint32_t startAngle, uint32_t endAngle, uint32_t fg_color, uint32_t bg_color, bool smooth) {}
