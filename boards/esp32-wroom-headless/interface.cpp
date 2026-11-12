@@ -2,32 +2,15 @@
 #include "globals.h"
 #include "tftLogger.h" 
 
-// --- Mandatory HAL functions (From official CYD interface.cpp) ---
-void _setup_gpio() {
-    // CYD initializes touch pins here, not needed for headless.
-}
-
-void _post_setup_gpio() {
-    // CYD does touch calibration here, not needed for headless.
-}
-
-void InputHandler() {
-    // No physical buttons to poll. Serial/WebUI handles input.
-}
-
-void _setBrightness(uint8_t brightval) {
-    // No screen backlight to control.
-}
-
-int getBattery() {
-    return 0; // No battery monitoring.
-}
-
+void _setup_gpio() {}
+void _post_setup_gpio() {}
+void InputHandler() {}
+void _setBrightness(uint8_t brightval) {}
+int getBattery() { return 0; }
 void powerOff() {}
 void checkReboot() {}
 bool isCharging() { return false; }
 
-// --- Stubs based on official tftLogger.h ---
 void rf_spectrum() {}
 
 tft_logger tft_logger;
@@ -35,7 +18,6 @@ tft_logger tft_logger;
 tft_logger::tft_logger(int16_t w, int16_t h) {}
 tft_logger::~tft_logger() {}
 
-// The drawing and printing functions the linker needs:
 void tft_logger::fillScreen(int32_t color) {}
 void tft_logger::drawRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t color) {}
 void tft_logger::fillRect(int32_t x, int32_t y, int32_t w, int32_t h, int32_t color) {} 
@@ -85,3 +67,7 @@ void tft_logger::getBinLog(uint8_t *outBuffer, size_t &outSize) {}
 void tft_logger::startAsyncSerial() {}
 void tft_logger::stopAsyncSerial() {}
 void tft_logger::getTftInfo() {}
+
+// --- The two new missing functions ---
+void TFT_eSPI::drawGlyphEt(uint16_t code) {}
+void tft_logger::log_drawString(String text, tftFuncs func, long arg1, long arg2) {}
