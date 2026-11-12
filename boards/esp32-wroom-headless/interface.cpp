@@ -68,6 +68,5 @@ void tft_logger::startAsyncSerial() {}
 void tft_logger::stopAsyncSerial() {}
 void tft_logger::getTftInfo() {}
 
-// --- The two new missing functions ---
-void TFT_eSPI::drawGlyphEt(uint16_t code) {}
+// The problematic line is gone!
 void tft_logger::log_drawString(String text, tftFuncs func, long arg1, long arg2) {}
